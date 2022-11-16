@@ -30,8 +30,8 @@ jobs:
       - name: Get version tag
         id: tag
         run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
-      - name: Tag stable by default
-        run: echo "REL_TYPE=stable" >> $GITHUB_ENV
+      - name: Tag latest by default
+        run: echo "REL_TYPE=latest" >> $GITHUB_ENV
       - name: Tag beta if beta
         if: contains(steps.tag.outputs.tag, 'beta')
         run: echo "REL_TYPE=beta" >> $GITHUB_ENV
