@@ -47,7 +47,7 @@ jobs:
           build-args: |
             CADDY_VERSION=${{ steps.tag.outputs.tag }}
           tags: |
-            ghcr.io/demifiend9/caddyp:${{ env.REL_TYPE }}
-            ghcr.io/demifiend9/caddyp:${{ steps.tag.outputs.tag }}
+            ghcr.io/demifiend9/caddy:${{ env.REL_TYPE }}
+            ghcr.io/demifiend9/caddy:${{ steps.tag.outputs.tag }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
